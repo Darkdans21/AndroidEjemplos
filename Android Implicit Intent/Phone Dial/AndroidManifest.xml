@@ -1,13 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.1" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.fsw_android.codigomaestro">
 
-    <!--Aqui debajo de estas lineas se insertaran los permisos necesarios para que funcione nuestra aplicación -->
 
+    <!--Aqui debajo de estas lineas se insertaran los permisos necesarios para que funcione nuestra aplicación -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <!--Despues de las librerias, van las clases java, si no se insertan aquí, nunca seran llamados, -->
-
-
    <application
        android:allowBackup="true"
        android:icon="@mipmap/ic_launcher"

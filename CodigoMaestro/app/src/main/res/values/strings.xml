@@ -2,21 +2,5 @@
     <!--Nombre de la aplicación-->
     <string name="app_name">Huella Docente</string>
 
-    <!--Nombre de nuevo registro-->
-    <string name="txtCorrecto">Se ha guardado correctamente</string>
-    <string name="txtIncorrecto">No se guardo correctamente</string>
-
-
-    <!--Nombre de iniciar sesión con huellas-->
-    <string name="txtInsertarHuella">Insertar la huella y espera a que se valide</string>
-    <string name="txtInsertarNuevaHuella">Insertar la huella y esperar a que se valide</string>
-    <string name="txtHuellaIncorrecta">Huella no valida</string>
-
-    <string name="txtUsuarioIncorrecto">Usuario no identificado</string>
-    <string name="txtUsuarioCorrecto">Bienvenido de nuevo</string>
-
-    <string name="txtGuardarRegistro">Se ha guardado correctamente la información</string>
-    <string name="txtActualizar">Se ha actualizado correctamente la información</string>
-
 
 </resources>

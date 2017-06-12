@@ -12,8 +12,5 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.fsw_android.codigomaestro.MainActivity">
 
-    <ExpandableListView
-        android:id="@+id/idListView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+     
 </LinearLayout>

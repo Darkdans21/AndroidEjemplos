@@ -1,18 +1,9 @@
 package com.ensardz.huellaapitest.Models;
 
-import com.ensardz.huellaapitest.Datos.Objetos.Checkout;
-import com.ensardz.huellaapitest.Datos.Objetos.Owner;
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
-
-/**
- * Created by Leonardo Padilla on 30/06/2017.
- */
-
 public class Object {
 
-    private Integer plan;
-    private Integer roomType;
+    //    private Integer plan;
+//    private Integer roomType;
     private String id;
     private String room;
     private String roomDescription;
@@ -23,12 +14,11 @@ public class Object {
     private String finishClassAt;
     private String barcode;
 
-public Object(){
-}
+    public Object(){
 
-    public Object(Integer plan, Integer roomType, String id, String room, String roomDescription, String assigmentCode, String assigment, String academyHour, String startClassAt, String finishClassAt, String barcode) {
-        this.plan = plan;
-        this.roomType = roomType;
+    }
+
+    public Object(String id, String room, String roomDescription, String assigmentCode, String assigment, String academyHour, String startClassAt, String finishClassAt, String barcode) {
         this.id = id;
         this.room = room;
         this.roomDescription = roomDescription;
@@ -38,22 +28,6 @@ public Object(){
         this.startClassAt = startClassAt;
         this.finishClassAt = finishClassAt;
         this.barcode = barcode;
-    }
-
-    public Integer getPlan() {
-        return plan;
-    }
-
-    public void setPlan(Integer plan) {
-        this.plan = plan;
-    }
-
-    public Integer getRoomType() {
-        return roomType;
-    }
-
-    public void setRoomType(Integer roomType) {
-        this.roomType = roomType;
     }
 
     public String getId() {
@@ -127,5 +101,22 @@ public Object(){
     public void setBarcode(String barcode) {
         this.barcode = barcode;
     }
+
+/*
+    @Override
+    public String toString() {
+        return "Object{" +
+                "id='" + id + '\'' +
+                ", room='" + room + '\'' +
+                ", roomDescription='" + roomDescription + '\'' +
+                ", assigmentCode='" + assigmentCode + '\'' +
+                ", assigment='" + assigment + '\'' +
+                ", academyHour='" + academyHour + '\'' +
+                ", startClassAt='" + startClassAt + '\'' +
+                ", finishClassAt='" + finishClassAt + '\'' +
+                ", barcode='" + barcode + '\'' +
+                '}';
+    }
+*/
 
 }

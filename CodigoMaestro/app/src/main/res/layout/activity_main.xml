@@ -12,5 +12,5 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.fsw_android.codigomaestro.MainActivity">
 
-     
+
 </LinearLayout>

@@ -24,14 +24,18 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity
 {
 
-    //Agregando esto//
-    private TextView textViewcity;
-    private TextView textViewDescription;
-    private TextView textViewTemp;
+    //Agregando esto estamos declarando las variables para usar los textView//
+    private TextView textView1;
+    private TextView textView2;
+    private TextView textView3;
 
+    //Le doy a la Interfaz (tipo de clase) una variable para usarla aqui//
     private DescargaRecorridoService service;
+
+    //Hacemos la llamada a la lista de objetos y una variable para usarla en esta clase//
     private Call<List<Object>> listaObjetos;
 
+    //Este es el link de la base de datos JSON//
     // https://young-escarpment-48238.herokuapp.com/routes
 
 
@@ -40,15 +44,19 @@ public class MainActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //Agregando esto//
+
+        //Agregando el metodo de abajo para correrlo desde el OnCreate//
         setUI();
 
+        //Estamos llamando a la variable del servicio para obetener la conexion de retrofit y GSON para la interfaz DescargaRecorridoService//
         service = API.getApi().create(DescargaRecorridoService.class);
 
 
+        //Mandamos llamar la lista de objetos en el servicio y obtener el recorrido//
         listaObjetos = service.getRecorrido();
         listaObjetos.enqueue(new Callback<List<Object>>()
         {
+            //Cuando la conexion fue exitosa nos manda esto//
             @Override
             public void onResponse(Call<List<Object>> call, Response<List<Object>> response)
             {
@@ -57,6 +65,7 @@ public class MainActivity extends AppCompatActivity
                 setResult(objetos);
             }
 
+            //Si la conexion no fue exitosa//
             @Override
             public void onFailure(Call<List<Object>> call, Throwable t)
             {
@@ -65,19 +74,22 @@ public class MainActivity extends AppCompatActivity
         });
     }
 
-    //Agregando esto//
+    //Agregando esto para enlazar los botones fisicos con su variable logica//
     private void setUI()
     {
-        textViewcity = (TextView) findViewById(R.id.textViewCity);
-        textViewDescription = (TextView) findViewById(R.id.textViewDescription);
-        textViewTemp = (TextView) findViewById(R.id.textViewTemperature);
+        textView1 = (TextView) findViewById(R.id.textViewCity);
+        textView2 = (TextView) findViewById(R.id.textViewDescription);
+        textView3 = (TextView) findViewById(R.id.textViewTemperature);
     }
 
 
+    //Les asignamos a los textViews los valores que recogimos de la api//
     private void setResult(List<Object> objects)
     {
-        textViewcity.setText(objects.get(0).getBarcode());
-        textViewDescription.setText(objects.get(0).getRoom());
-        textViewTemp.setText(objects.get(0).getRoomDescription());
+        textView1.setText(objects.get(0).getBarcode());
+        textView2.setText(objects.get(0).getRoom());
+        textView3.setText(objects.get(0).getRoomDescription());
     }
-}
+
+
+} //Final del MAIN//

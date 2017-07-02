@@ -11,13 +11,22 @@ import java.util.List;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class API {
-
+public class API
+{
+    //El siguiente link que esta completo es donde almacenamos nuestra base de datos JSON en "HEROKU"//
     //https://young-escarpment-48238.herokuapp.com/routes
+
+    //Aqui Escribimos Final para que no se modifique el URL que utilizamos para acceder a los datos JSON//
     public static final String BASE_URL = "https://young-escarpment-48238.herokuapp.com/";
+
+    //Inicializamos Retrofit como nullo//
     private static Retrofit retrofit = null;
 
-    public static Retrofit getApi(){
+
+    ////
+    public static Retrofit getApi()
+    {
+        //Si retrofit es null tomara los datos de la lista de objetos//
         if(retrofit == null){
             Type listType = new TypeToken<List<Object>>(){}.getType();
 
